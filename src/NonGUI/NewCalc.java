@@ -1,37 +1,27 @@
 package NonGUI;
-import java.util.Scanner;
+import java.util.*;
 
 public class NewCalc {
-    public static void main(String[] args)
-    {
-        var Items = "Hotdog, Brat, Hamburger, Fries, Soda";
-        var Prices = "2.50, 3.50, 5.00, 2.00, 2.00";
+    public static void main(String[] args) {
+        /*
+         * Preset values only
+         * for this practice*/
+
+        HashMap hm = new HashMap();
+        hm.put("Hotdog", new Double(2.50));
+        hm.put("Brat", new Double(3.50));
+        hm.put("Hamburger", new Double(5.00));
+        hm.put("Fries", new Double(2.00));
+        hm.put("Soda", new Double(2.00));
+
         var States = "NJ, NC";
         double price;
         double quantity;
         double tax;
         double total;
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Hotdog, Brat, Hamburger, Fries, Soda");
-        System.out.print("What would you like? ");
-        Items = keyboard.nextLine();
-        if ( Items == "Hotdog, Brat, Hamburger, Fries, Soda") {
-            System.out.println("How many?");
-            quantity = keyboard.nextDouble();
-            if (quantity > 0) {
-                System.out.println("That is too less. Please enter a number larger than 0");
-            }else {
-                System.out.println("Successfully added to cart!");
-            }
-            System.out.println("What state do you live in?");
-            States = keyboard.nextLine();
-            if (States == "NJ, NC") {
-                System.out.println("Successfully applied tax.");
-            }else {
-                System.out.println("Invalid State. Quitting...");
-            }
-        }else {
-            System.out.println("That is not a valid option. Quitting...");
-        }
+
+        Scanner scanner = new Scanner(System.in); // Start
+        System.out.println("Choose an item: Hotdog, Brat, Hamburger, Fries, Soda"); // Message for input
+
     }
 }
